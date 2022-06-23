@@ -1,0 +1,6 @@
+name: Recipe Branding
+type: module
+description: 'This module will generate the image link for recipe with brand logo'
+package: Custom
+version: 1.0
+core_version_requirement: ^8 || ^9

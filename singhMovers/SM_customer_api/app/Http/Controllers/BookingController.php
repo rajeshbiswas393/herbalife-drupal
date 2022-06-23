@@ -293,6 +293,35 @@ class BookingController extends Controller
              return response(['message'=>'No user found'], 422);
         }
     }
+    
+    public function signBooking(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'signature' => 'required|string',
+            'id' => 'required|numeric|min:0',
+        ]);
+        
+        if ($validator->fails())
+        {
+            return response(['errors'=>$validator->errors()->all()], 422);
+        }
+        
+        $booking = Booking::where(['id' => $request->id]);
+        if($booking)
+        {
+                $booking->update([
+                    'singature'=>$request->signature,
+                    'signatuteDateTime' => date('Y-m-d G:i:s')
+                    ]);
+                $response = ['message' => 'Signature updated successfully!'];
+                return response($response, 200);
+          
+        }
+        else
+        {
+             return response(['message'=>'No user found'], 422);
+        }
+    }
 
     /**
      * Remove the specified resource from storage.

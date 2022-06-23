@@ -1,0 +1,86 @@
+pdf_using_mpdf.settings:
+  type: config_object
+  label: 'PDF using mPDF settings'
+  mapping:
+    pdf_using_mpdf:
+      type: mapping
+      label: 'Parent key that holds the config'
+      mapping:
+        pdf_filename:
+          type: string
+          label: 'Default PDF filename'
+        pdf_save_option:
+          type: string
+          label: 'Save options - browser, download, or save to server'
+        pdf_set_title:
+          type: string
+          label: 'PDF file title value'
+        pdf_set_author:
+          type: string
+          label: 'PDF file author value'
+        pdf_set_subject:
+          type: string
+          label: 'PDF file subject value'
+        pdf_set_creator:
+          type: string
+          label: 'PDF file creator value'
+        margin_top:
+          type: string
+          label: 'PDF file margin top value'
+        margin_right:
+          type: string
+          label: 'PDF file margin right value'
+        margin_bottom:
+          type: string
+          label: 'PDF file margin bottom value'
+        margin_left:
+          type: string
+          label: 'PDF file margin left value'
+        margin_header:
+          type: string
+          label: 'PDF file margin header value'
+        margin_footer:
+          type: string
+          label: 'PDF file margin footer value'
+        pdf_font_size:
+          type: string
+          label: 'PDF file font size value'
+        pdf_default_font:
+          type: string
+          label: 'PDF file default font value'
+        pdf_page_size:
+          type: string
+          label: 'PDF file page size value'
+        dpi:
+          type: string
+          label: 'PDF file dots per inch value'
+        img_dpi:
+          type: string
+          label: 'PDF file image dots per inch value'
+        orientation:
+          type: string
+          label: 'PDF file orientation value'
+        watermark_option:
+          type: string
+          label: 'PDF file watermark option'
+        watermark_opacity:
+          type: string
+          label: 'PDF file watermark opacity value'
+        pdf_watermark_text:
+          type: string
+          label: 'PDF file watermark text value'
+        watermark_image:
+          type: mapping
+          label: 'PDF file watermark image'
+        pdf_header:
+          type: string
+          label: 'PDF file header value'
+        pdf_footer:
+          type: string
+          label: 'PDF file footer value'
+        pdf_css_file:
+          type: string
+          label: 'PDF file css path'
+        pdf_password:
+          type: string
+          label: 'PDF file password'

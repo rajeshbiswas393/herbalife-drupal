@@ -36,6 +36,8 @@ use App\Http\Controllers\Auth\ApiAuthController;
     Route::post('/update-profile', [ApiAuthController::class,'editProfile'])->name('update-profile.api');
     
     Route::post('/get-services', [BookingController::class,'getServices'])->name('get-services.api');
+    
+    Route::post('/sign-booking', [BookingController::class,'signBooking'])->name('sign-booking.api');
   });
 
 Route::middleware(['cors', 'json.response','auth:api'])->get('/user', function (Request $request) {

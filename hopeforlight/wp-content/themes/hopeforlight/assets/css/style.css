@@ -1,0 +1,596 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+/* ===================================== Import Less ================================== */
+@font-face {
+  font-family: 'mouse-300';
+  src: url("../fonts/RobotoSlab-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'mouse-500';
+  src: url("../fonts/RobotoSlab-Bold.ttf") format("truetype"); }
+/* ===================================== Basic CSS ================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #444; }
+
+a:hover {
+  color: #444; }
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0; }
+
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.cp {
+  cursor: pointer; }
+
+html, body {
+  height: 100%; }
+
+p {
+  margin-bottom: 0px;
+  width: 100%; }
+
+.no-padding {
+  padding: 0px; }
+
+.no-margin {
+  margin: 0px; }
+
+.hid {
+  display: none; }
+
+.top-mar {
+  margin-top: 15px; }
+
+.h-100 {
+  height: 100%; }
+
+::placeholder {
+  color: #747f8a !important;
+  font-size: 13px;
+  opacity: .5 !important; }
+
+.container-fluid {
+  padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+strong {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+body {
+  background-color: #f7f7ff !important;
+  font-family: "mouse-300", Arial, Helvetica, sans-serif;
+  color: #6A6A6A; }
+
+.session-title {
+  padding: 30px;
+  margin: 0px; }
+  .session-title h2 {
+    width: 100%;
+    text-align: center; }
+  .session-title p {
+    max-width: 850px;
+    text-align: center;
+    float: none;
+    margin: auto;
+    font-size: 14px; }
+  .session-title span {
+    float: right;
+    font-style: italic; }
+
+.inner-title {
+  padding: 20px;
+  padding-left: 0px;
+  margin-bottom: 30px; }
+  .inner-title h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "slab", Arial, Helvetica, sans-serif; }
+  .inner-title p {
+    width: 100%;
+    text-align: center; }
+
+.page-nav {
+  padding: 40px;
+  text-align: center;
+  padding-top: 160px; }
+  .page-nav ul {
+    float: none;
+    margin: auto; }
+  .page-nav h2 {
+    font-size: 36px;
+    width: 100%;
+    color: #444; }
+    @media screen and (max-width: 600px) {
+      .page-nav h2 {
+        font-size: 26px; } }
+  .page-nav ul li {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px; }
+    .page-nav ul li i {
+      width: 30px;
+      text-align: center;
+      color: #444; }
+    .page-nav ul li a {
+      color: #444; }
+
+.btn-success {
+  background-color: #71b61b;
+  border-color: #71b61b; }
+  .btn-success:hover {
+    background-color: #71b61b !important;
+    border-color: #71b61b !important; }
+  .btn-success:active {
+    background-color: #71b61b !important;
+    border-color: #71b61b !important; }
+  .btn-success:focus {
+    background-color: #71b61b !important;
+    border-color: #71b61b !important;
+    box-shadow: none !important; }
+
+.btn-info {
+  background-color: #4f6dcd;
+  border-color: #4f6dcd; }
+  .btn-info:hover {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important; }
+  .btn-info:active {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important; }
+  .btn-info:focus {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important;
+    box-shadow: none !important; }
+
+.btn {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px; }
+
+.form-control:focus {
+  box-shadow: none !important;
+  border: 2px solid  #00a8df; }
+
+.btn-light {
+  background-color: #FFF;
+  color: #3F3F3F; }
+
+.collapse.show {
+  display: block !important; }
+
+.form-control:focus {
+  box-shadow: none;
+  border: 0px !important;
+  overflow: hidden; }
+
+.form-control {
+  background-color: #FFF;
+  margin-bottom: 20px; }
+  .form-control:focus {
+    background-color: #FFF;
+    border-color: #CCC; }
+
+.container {
+  max-width: 1100px; }
+
+/* ===================================== Header CSS ================================== */
+header {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  background-color: #FFF; }
+  header .header-top {
+    background-color: #f9f9f9; }
+    header .header-top .left-item ul li {
+      float: left;
+      color: #6D6D6D;
+      padding: 10px;
+      font-size: 0.9rem; }
+      header .header-top .left-item ul li i {
+        color: #6D6D6D; }
+    header .header-top .right-item ul {
+      float: right; }
+      header .header-top .right-item ul li {
+        float: left;
+        color: #6D6D6D;
+        padding: 10px; }
+  header .header-nav .nav-item ul {
+    float: right;
+    width: 100%; }
+    header .header-nav .nav-item ul li {
+      float: left;
+      font-family: "mouse-300", Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      padding: 28px; }
+      @media screen and (max-width: 1071px) {
+        header .header-nav .nav-item ul li {
+          padding: 28px 20px; } }
+      @media screen and (max-width: 916px) {
+        header .header-nav .nav-item ul li {
+          padding: 30px 18px; }
+          header .header-nav .nav-item ul li a {
+            font-size: .9rem; } }
+      @media screen and (max-width: 767px) {
+        header .header-nav .nav-item ul li {
+          float: none;
+          padding: 14px;
+          border-top: 1px solid #CCC; } }
+  header .header-nav .nav-img img {
+    width: 200px;
+    padding: 0px;
+    margin-top: 21px; }
+    @media screen and (max-width: 767px) {
+      header .header-nav .nav-img img {
+        margin-top: 0px;
+        padding: 10px; } }
+  header .header-nav .appoint {
+    padding-top: 21px;
+    text-align: right; }
+  header .scroll-to-fixed-fixed {
+    background-color: #FFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.small-menu {
+  float: right;
+  color: #71b61b;
+  font-size: 32px;
+  margin-top: 12px;
+  margin-right: 12px; }
+
+/* ===================================== Slider CSS ================================== */
+.slider-detail {
+  padding-top: 125px; }
+  @media screen and (max-width: 767px) {
+    .slider-detail {
+      padding-top: 100px; } }
+  .slider-detail .carousel-caption {
+    text-align: left;
+    bottom: 110px; }
+    .slider-detail .carousel-caption h5 {
+      font-size: 44px;
+      margin-left: -40px;
+      text-align: center; }
+    .slider-detail .carousel-caption p {
+      margin-left: -40px;
+      font-weight: 600;
+      margin-top: 40px;
+      font-size: 19px;
+      text-align: center; }
+  .slider-detail .vbh {
+    margin-left: -40px;
+    text-align: center; }
+    .slider-detail .vbh .btn {
+      padding: 10px;
+      margin-top: 40px;
+      font-weight: 600;
+      font-size: 18px;
+      margin: auto;
+      margin-top: 40px; }
+  .slider-detail .vdg-cur {
+    color: #FFF; }
+
+/* ===================================== Slider CSS ================================== */
+.what-we-do {
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .what-we-do {
+      padding: 30px 10px; } }
+  .what-we-do .donat-form {
+    max-width: 400px;
+    margin-bottom: 20px;
+    margin: auto;
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54); }
+    .what-we-do .donat-form .form-titl {
+      padding: 20px;
+      background-color: #9164bf;
+      color: #FFF; }
+    .what-we-do .donat-form .form-dong {
+      background-color: #FFF;
+      padding: 20px; }
+  .what-we-do .input-group-text {
+    background-color: #FFF !important; }
+  .what-we-do .form-control {
+    background-color: #F3F3F3;
+    border-radius: 0px; }
+  .what-we-do .btn {
+    width: 100%; }
+  .what-we-do .input-group {
+    margin-bottom: 30px !important; }
+
+/* ===================================== Donation list CSS ================================== */
+.donation-list .we-ro {
+  display: flex;
+  padding: 10px; }
+  .donation-list .we-ro .icon {
+    padding: 10px 20px; }
+    .donation-list .we-ro .icon i {
+      font-size: 26px;
+      padding: 20px;
+      background-color: #FFF;
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      border-radius: 2px;
+      border-radius: 50px; }
+  .donation-list .we-ro .detail p {
+    font-size: 13px; }
+
+/* ===================================== Events Home CSS ================================== */
+.events {
+  background-color: #FFF;
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .events {
+      padding: 30px 10px; } }
+  .events .event-ro .event-box {
+    text-align: center;
+    margin-bottom: 20px; }
+    .events .event-ro .event-box img {
+      margin-bottom: 20px; }
+    .events .event-ro .event-box h4 {
+      font-size: 18px; }
+    .events .event-ro .event-box .raises {
+      margin-bottom: 10px; }
+      .events .event-ro .event-box .raises span {
+        color: #71b61b; }
+    .events .event-ro .event-box .desic {
+      font-size: 13px;
+      margin-bottom: 15px; }
+
+/* ===================================== Charity Number CSS ================================== */
+.doctor-message {
+  background-image: url("../images/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+  .doctor-message .inner-lay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    color: #FFF; }
+    @media screen and (max-width: 940px) {
+      .doctor-message .inner-lay {
+        padding: 30px 10px; } }
+    .doctor-message .inner-lay .numb {
+      text-align: center;
+      padding: 30px; }
+      .doctor-message .inner-lay .numb h3 {
+        font-size: 42px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #CCC;
+        margin-bottom: 20px; }
+
+/* ===================================== Our Blog CSS ================================== */
+.our-blog {
+  background-color: #FDFDFD;
+  padding: 40px; }
+  @media screen and (max-width: 967px) {
+    .our-blog {
+      padding: 30px 0px; } }
+  .our-blog .single-blog {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54); }
+    .our-blog .single-blog figure {
+      margin-bottom: 5px; }
+    .our-blog .single-blog .blog-detail {
+      padding: 15px; }
+    .our-blog .single-blog small {
+      color: #71b61b;
+      font-size: 12px; }
+    .our-blog .single-blog h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      margin-top: 10px; }
+    .our-blog .single-blog p {
+      text-align: justify;
+      text-indent: 20px; }
+    .our-blog .single-blog .link a {
+      font-size: 12px;
+      color: #71b61b; }
+    .our-blog .single-blog .link i {
+      padding-top: 6px;
+      margin-left: 5px;
+      color: #FFFFFF; }
+
+/* ===================================== About US CSS ================================== */
+.with-medical {
+  padding: 50px;
+  background-color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .with-medical {
+      padding: 30px 10px; } }
+  .with-medical .txtr {
+    padding: 10px; }
+    .with-medical .txtr h4 {
+      font-size: 32px; }
+      .with-medical .txtr h4 span {
+        color: #71b61b; }
+    .with-medical .txtr p {
+      text-indent: 20px;
+      font-size: 1rem;
+      text-align: justify; }
+
+/* ===================================== Fooer CSS ================================== */
+.footer {
+  padding: 50px;
+  padding-bottom: 0px;
+  background-color: #444;
+  color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .footer {
+      padding: 30px 10px; } }
+  .footer h2 {
+    font-size: 26px;
+    margin-top: 10px; }
+  .footer p {
+    text-align: justify;
+    text-indent: 20px;
+    font-size: .9rem; }
+  .footer .link-list li {
+    padding: 10px;
+    border-bottom: 1px solid #6C6C6C;
+    font-size: .9rem; }
+    .footer .link-list li a {
+      color: #FFF; }
+    .footer .link-list li i {
+      float: right; }
+  .footer .map-img {
+    font-weight: 600;
+    font-size: 17px;
+    padding-left: 20px; }
+  .footer address {
+    font-weight: 300; }
+    .footer address a {
+      color: #FFF;
+      font-size: 1rem;
+      font-family: "mouse-300", Arial, Helvetica, sans-serif; }
+
+.copy {
+  padding: 20px;
+  background-color: #2E2E2E;
+  color: #FFF; }
+  .copy a {
+    color: #FFF; }
+  .copy span {
+    float: right; }
+    .copy span i {
+      margin-right: 20px; }
+
+.kf-2 {
+  background-color: #FCFCFC;
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .kf-2 {
+      padding: 30px 10px; } }
+  .kf-2 .single-key {
+    box-shadow: 0 2px 3px 0 rgba(218, 218, 253, 0.35), 0 0px 3px 0 rgba(206, 206, 238, 0.35); }
+
+/* ===================================== Our Team CSS ================================== */
+.our-team {
+  padding: 50px;
+  background-color: #EDEDED; }
+  @media screen and (max-width: 940px) {
+    .our-team {
+      padding: 30px 10px; } }
+  .our-team .user-card {
+    background-color: #FFF;
+    padding: 10px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    margin-bottom: 20px; }
+    .our-team .user-card img {
+      width: 100%; }
+    .our-team .user-card .detfs {
+      text-align: center; }
+      .our-team .user-card .detfs ul {
+        margin-left: 10%;
+        width: 100%; }
+        .our-team .user-card .detfs ul li {
+          float: left;
+          padding: 10px;
+          font-size: 13px; }
+      .our-team .user-card .detfs p {
+        margin-top: 17px;
+        font-size: 0.9rem; }
+
+/* ===================================== Gallery Style  ================================== */
+.gallery-filter {
+  width: 100%;
+  text-align: center; }
+  .gallery-filter .btn {
+    background-color: #FFF; }
+
+.gallery {
+  padding: 30px;
+  background-color: #FFF; }
+
+.gallery-title {
+  font-size: 36px;
+  color: #71b61b;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 70px; }
+
+.gallery-title:after {
+  content: "";
+  position: absolute;
+  width: 7.5%;
+  left: 46.5%;
+  height: 45px;
+  border-bottom: 1px solid #00a8df; }
+
+.filter-button {
+  font-size: 18px;
+  border: 1px solid #71b61b;
+  border-radius: 5px;
+  text-align: center;
+  color: #71b61b;
+  margin-bottom: 30px; }
+
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #71b61b;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #71b61b; }
+
+.btn-default:active .filter-button:active {
+  background-color: #71b61b;
+  color: white; }
+
+.port-image {
+  width: 100%; }
+
+.gallery_product {
+  margin-bottom: 30px; }
+
+.contact-rooo {
+  padding: 50px;
+  background-color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .contact-rooo {
+      padding: 30px 10px; }
+
+      header .header-top .left-item ul li {
+        padding: 4px;
+      }
+    
+    }
+
+/*# sourceMappingURL=style.css.map */

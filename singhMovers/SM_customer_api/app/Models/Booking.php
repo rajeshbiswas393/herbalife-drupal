@@ -43,6 +43,8 @@ class Booking extends Authenticatable
         'detail' ,
         'querydate',
         'ip' ,
+        'signature',
+        'signatuteDateTime',
         'status'
     ];
 

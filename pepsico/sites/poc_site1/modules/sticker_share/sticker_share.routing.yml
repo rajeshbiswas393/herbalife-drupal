@@ -1,0 +1,23 @@
+sticker_share.share_page:
+  path: '/sticker-sharing/{id}'
+  defaults:
+    _controller: '\Drupal\sticker_share\Controller\StickerController::share_page'
+    _title: 'Download and Share E-Stickers'
+  requirements: 
+    _permission: 'access content'
+
+sticker_share.barand_recipi_image:
+  path: '/brand-recipi-image/{id}'
+  defaults:
+    _controller: '\Drupal\sticker_share\Controller\StickerController::recipImage'
+    _title: 'Get the recipi image with brand logo'
+  requirements:
+    _permission: 'access content'
+
+sticker_share.whatsapp _form:
+  path: '/sticker-sharing/whatsapp'
+  defaults:
+    _form: '\Drupal\sticker_share\Form\WhatsappForm'
+    _title: 'whatsapp Message'
+  requirements:
+    _permission: 'access content'

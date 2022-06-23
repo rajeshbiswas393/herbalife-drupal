@@ -1,0 +1,49 @@
+<?php
+
+use \Mpdf\Mpdf;
+
+/**
+ * Implements hook_uninstall().
+ */
+function pdf_using_mpdf_uninstall() {
+  \Drupal::configFactory()->getEditable('pdf_using_mpdf.settings')->delete();
+  \Drupal::configFactory()->getEditable('core.entity_view_mode.node.pdf_using_mpdf')->delete();
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function pdf_using_mpdf_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'install') {
+    if (!class_exists(Mpdf::class)) {
+      $requirements = [
+        'pdf_using_mpdf' => [
+          'title' => t('mPDF library'),
+          'value' => '',
+          'description' => t('mPDF library does not exist. Please check README'),
+          'severity' => REQUIREMENT_ERROR,
+        ]
+      ];
+    }
+  }
+
+  if ($phase == 'runtime') {
+    if (class_exists(Mpdf::class)) {
+      $requirements = [
+        'pdf_using_mpdf' => [
+          'title' => t('mPDF library'),
+          'value' => 'Installed version: ' . Mpdf::VERSION,
+          'description' => t('mPDF library is installed'),
+          'severity' => REQUIREMENT_INFO,
+        ]
+      ];
+    }
+    else {
+      \Drupal::logger('pdf_using_mpdf')->critical(t('mPDF library is not installed.'));
+    }
+  }
+
+  return $requirements;
+}

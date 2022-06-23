@@ -1,0 +1,10 @@
+services:
+  pdf_using_mpdf.conversion:
+    class: \Drupal\pdf_using_mpdf\Conversion\ConvertToPdf
+    arguments: ['@renderer', '@config.factory', '@token', '@logger.factory']
+
+  access_check.pdf_using_mpdf.generate:
+    class: Drupal\pdf_using_mpdf\Access\GeneratePdfAccessCheck
+    arguments: ['@current_user']
+    tags:
+      - { name: access_check, applies_to: _access_generate_pdf }

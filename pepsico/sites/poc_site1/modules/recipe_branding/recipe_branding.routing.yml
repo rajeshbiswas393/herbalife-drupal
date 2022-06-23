@@ -1,0 +1,7 @@
+recipe_branding.recipi_brand_image:
+  path: '/brand-recipe-image/{id}'
+  defaults:
+    _controller: '\Drupal\recipe_branding\Controller\RecipeController::recipeImageWithBrandLogo'
+    _title: 'Get the recipi image with brand logo'
+  requirements:
+    _permission: 'access content'
